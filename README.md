@@ -28,7 +28,7 @@ The application exposes a single HTTP endpoint:
 
 ## Steps to Run the Application Locally
 ```bash
-### Clone the Repository
+# Clone the Repository
 git clone <repository-url>
 
 # Move to project directory
@@ -36,9 +36,6 @@ cd 8byte-intern-assignment
 
 # Install Node.js dependencies
 npm install
-
-# (Optional) Export environment variables if required
-export PORT=3000
 
 # Run the application locally
 node app.js
@@ -58,3 +55,15 @@ docker run -p 3000:3000 8byte-intern-app
 http://localhost:3000
 ```
 
+# Steps to Provision Infrastructure Using Terraform
+ ```text
+# Terraform Directory Structure
+terraform/
+│── provider.tf
+│── main.tf
+│── variables.tf
+│── outputs.tf
+│── terraform.tfvars
+
+```
+# 

@@ -27,8 +27,8 @@ The application exposes a single HTTP endpoint:
 
 
 ## Steps to Run the Application Locally
-### Clone the Repository
 ```bash
+### Clone the Repository
 git clone <repository-url>
 
 # Move to project directory

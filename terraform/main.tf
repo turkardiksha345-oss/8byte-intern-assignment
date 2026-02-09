@@ -96,7 +96,7 @@ resource "aws_security_group" "aws_sg" {
 
 resource "aws_instance" "my_instance" {
   ami = var.ami_id   # ----> change according to the AMI 
-  instance_type = "t3.micro"
+  instance_type = var.instance_type
    subnet_id = aws_subnet.my_public.id
   vpc_security_group_ids = [aws_security_group.aws_sg.id]    # associating security group with instance
   associate_public_ip_address = true

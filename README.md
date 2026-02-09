@@ -23,6 +23,36 @@ The application exposes a single HTTP endpoint:
 - Response:
  `8byte Intern Assignment Successfully Deployed`
 
+## Architecture Diagram
+```text
+Developer (Local Machine)
+        |
+        v
+Node.js Application
+        |
+        v
+Docker Container
+        |
+        v
+Terraform (Infrastructure as Code)
+        |
+        v
+AWS Cloud
+  ├── VPC
+  │    └── Public Subnet
+  │         └── EC2 Instance (Ubuntu 22.04, t2.micro)
+  │              └── Docker Runtime
+  │                   └── Node.js Application (Port 3000)
+  |
+  └── Internet Gateway
+        |
+        v
+Public Internet
+        |
+        v
+User Browser
+  http://<EC2-PUBLIC-IP>:3000
+```
 
 ## Steps to Run the Application Locally
 ```bash

@@ -3,18 +3,16 @@
 ## Project Overview
 This project is part of the **8byte DevOps Intern Technical Assignment**.  
 
-The objective is to deploy a simple Node.js application on AWS using modern DevOps practices such as containerization, Infrastructure as Code, and CI/CD automation.
+The objective is to deploy a simple Node.js application on AWS using modern DevOps practices such as containerization, and Infrastructure as Code. 
 
 The application is built using Node.js (Express), Containerized using Docker, 
-Deployed on an AWS EC2 instance provisioned via Terraform, 
-Integrated with a GitHub Actions CI pipeline.
+Deployed on an AWS EC2 instance provisioned via Terraform .
 
 ## Tech Stack used to create resources 
 
 - Cloud Provider: AWS
 - Infrastructure as Code: Terraform
 - Containerization: Docker
-- CI/CD: GitHub Actions
 - Backend: Node.js (Express)
 - Operating System: Ubuntu 22.04
 
@@ -43,7 +41,7 @@ node app.js
 # Acces the application through 
  http://localhost:3000
 ```
-# Steps to Build and Run Docker Image
+## Steps to Build and Run Docker Image
 ```bash
 # build docker image 
 docker build -t 8byte-intern-app .
@@ -72,4 +70,24 @@ terraform init
 terraform validate
 terraform plan
 terraform apply
+```
+
+## Steps to Deploy Application on EC2
+```bash
+**SSH into EC2 Instance**
+ssh -i <key-pair.pem> ubuntu@<EC2-PUBLIC-IP>
+
+**Verify Docker Installation**
+docker --version
+
+**Clone Repository on EC2**
+git clone <repository-url>
+cd 8byte-intern-assignment
+
+**Build and Run Docker Container**
+docker build -t 8byte-intern-app .
+docker run -d -p 3000:3000 8byte-intern-app
+
+**Access the Application**
+http://<EC2-PUBLIC-IP>:3000
 ```

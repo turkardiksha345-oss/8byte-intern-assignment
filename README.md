@@ -5,9 +5,8 @@ This project is part of the **8byte DevOps Intern Technical Assignment**.
 
 The objective is to deploy a simple Node.js application on AWS using modern DevOps practices such as containerization, Infrastructure as Code, and CI/CD automation.
 
-The application is built using Node.js (Express).
-Containerized using Docker.
-Deployed on an AWS EC2 instance provisioned via Terraform.
+The application is built using Node.js (Express), Containerized using Docker, 
+Deployed on an AWS EC2 instance provisioned via Terraform, 
 Integrated with a GitHub Actions CI pipeline.
 
 ## Tech Stack used to create resources 

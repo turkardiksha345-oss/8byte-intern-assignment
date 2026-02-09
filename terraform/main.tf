@@ -25,7 +25,7 @@ resource "aws_subnet" "my_public" {
 
 #Internet Gateway
 
-resource "aws_internet_gateway" "my-igw" {
+resource "aws_internet_gateway" "my_igw" {
     vpc_id = aws_vpc.my_vpc.id
 
     tags = {
@@ -37,10 +37,10 @@ resource "aws_internet_gateway" "my-igw" {
 # Route Table
 
 resource "aws_route_table" "public_rt" {
-  vpc_id = aws_vpc.main_vpc.id
+  vpc_id = aws_vpc.my_vpc.id
   route {
     cidr_block = "0.0.0.0/0"
-    gateway_id = aws_internet_gateway.igw.id
+    gateway_id = aws_internet_gateway.my_igw.id
   }
 
   tags = {

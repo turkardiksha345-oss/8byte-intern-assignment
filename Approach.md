@@ -55,19 +55,6 @@ This method closely resembles real-world production deployment workflows.
 
 ---
 
-## CI/CD Automation with GitHub Actions
-GitHub Actions was used to automate the Docker build process.
-
-**CI/CD workflow design:**
-- Triggered on every push to the `main` branch
-- Automatically checks out the source code
-- Builds the Docker image to validate container configuration
-- Ensures early detection of build issues
-
-This pipeline improves reliability and reduces manual effort during development.
-
----
-
 ## Security Considerations
 - Security Group rules were limited to only required ports (22 and 3000)
 - Docker installation was automated using `user_data` to reduce configuration drift
@@ -76,5 +63,5 @@ This pipeline improves reliability and reduces manual effort during development.
 ---
 
 ## Conclusion
-This approach demonstrates an end-to-end DevOps workflow that includes application validation, containerization, infrastructure automation, 
-CI/CD integration, and deployment on cloud infrastructure. The solution emphasizes simplicity, automation, and clarity, aligning with real-world DevOps best practices.
+This approach demonstrates an end-to-end DevOps workflow that includes application validation, containerization, infrastructure automation,  
+and deployment on cloud infrastructure. The solution emphasizes simplicity, automation, and clarity, aligning with real-world DevOps best practices.

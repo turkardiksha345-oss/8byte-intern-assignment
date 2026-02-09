@@ -95,11 +95,12 @@ resource "aws_security_group" "aws_sg" {
 ## Ec2 Instnace
 
 resource "aws_instance" "my_instance" {
-  ami = "ami-0fa91bc90632c73c9"    # ----> change according to the AMI 
+  ami = var.ami_id   # ----> change according to the AMI 
   instance_type = "t3.micro"
    subnet_id = aws_subnet.my_public.id
   vpc_security_group_ids = [aws_security_group.aws_sg.id]    # associating security group with instance
   associate_public_ip_address = true
+  key_name = var.key_name
 
  user_data = <<-EOF
               #!/bin/bash

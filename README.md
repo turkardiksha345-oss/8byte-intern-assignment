@@ -40,7 +40,7 @@ Terraform (Infrastructure as Code)
 AWS Cloud
   ├── VPC
   │    └── Public Subnet
-  │         └── EC2 Instance (Ubuntu 22.04, t2.micro)
+  │         └── EC2 Instance (Ubuntu 22.04, t3.micro)
   │              └── Docker Runtime
   │                   └── Node.js Application (Port 3000)
   |

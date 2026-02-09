@@ -73,21 +73,22 @@ terraform apply
 ```
 
 ## Steps to Deploy Application on EC2
-
-**SSH into EC2 Instance**
+```bash
+# SSH into EC2 Instance
 ssh -i <key-pair.pem> ubuntu@<EC2-PUBLIC-IP>
 
-**Verify Docker Installation**
+# Verify Docker Installation
 docker --version
 
-**Clone Repository on EC2**
+# Clone Repository on EC2
 git clone <repository-url>
 cd 8byte-intern-assignment
 
-**Build and Run Docker Container**
+# Build and Run Docker Container
 docker build -t 8byte-intern-app .
 docker run -d -p 3000:3000 8byte-intern-app
 
-**Access the Application**
+# Access the Application
 http://<EC2-PUBLIC-IP>:3000
 
+```
